@@ -1,19 +1,23 @@
-
 <!DOCTYPE html>
 <html>
 <head>
   <title>Redirecting...</title>
-  <script>
-    function openPopup() {
-      var popup = window.open('https://us.sandata.com/Security/Login.aspx?agencyno=88075', '_blank', 'width=800,height=600');
-      if (!popup || popup.closed || typeof popup.closed == 'undefined') {
-        alert('Popup was blocked. Please allow popups for this site.');
-      }
-    }
-  </script>
+  <meta charset="UTF-8">
 </head>
 <body>
-  <p>Click the button below to open the application:</p>
-  <button onclick="openPopup()">Open Sandata Login</button>
+  <p>Redirecting...</p>
+  <button id="popupButton">Open Sandata Login</button>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var button = document.getElementById("popupButton");
+      button.addEventListener("click", function () {
+        var popup = window.open("https://us.sandata.com/Security/Login.aspx?agencyno=88075", "_blank", "width=800,height=600");
+        if (!popup) {
+          alert("Popup was blocked. Please allow popups for this site.");
+        }
+      });
+    });
+  </script>
 </body>
 </html>

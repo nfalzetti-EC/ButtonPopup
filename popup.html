@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Opening Sandata...</title>
+    <script>
+        window.onload = function () {
+            const popup = window.open(
+                "https://us.sandata.com/Security/Login.aspx?agencyno=88075",
+                "_blank",
+                "width=800,height=600"
+            );
+            if (!popup) {
+                document.body.innerHTML = "<p>Popup was blocked. Please allow popups for this site.</p>";
+            } else {
+                window.close(); // Close this tab if popup succeeded
+            }
+        };
+    </script>
+</head>
+<body>
+    <p>Opening Sandata Login...</p>
+</body>
+</html>

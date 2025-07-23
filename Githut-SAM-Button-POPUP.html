@@ -1,0 +1,19 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Redirecting...</title>
+  <script>
+    function openPopup() {
+      var popup = window.open('https://us.sandata.com/Security/Login.aspx?agencyno=88075', '_blank', 'width=800,height=600');
+      if (!popup || popup.closed || typeof popup.closed == 'undefined') {
+        alert('Popup was blocked. Please allow popups for this site.');
+      }
+    }
+  </script>
+</head>
+<body>
+  <p>Click the button below to open the application:</p>
+  <button onclick="openPopup()">Open Sandata Login</button>
+</body>
+</html>

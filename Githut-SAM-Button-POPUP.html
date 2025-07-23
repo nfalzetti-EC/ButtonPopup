@@ -14,6 +14,11 @@
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
+      
+// Attempt to close the current tab after a short delay
+      setTimeout(() => {
+        window.close();
+      }, 1000);
     }
   </script>
 </head>

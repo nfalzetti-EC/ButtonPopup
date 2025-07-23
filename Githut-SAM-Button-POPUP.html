@@ -1,8 +1,44 @@
-
 <!DOCTYPE html>
 <html>
 <head>
   <title>Opening SAM Login page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
+      color: #333;
+      text-align: center;
+      padding: 50px;
+    }
+
+    .message-box {
+      background-color: #ffffff;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 30px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .message-box h1 {
+      font-size: 24px;
+      color: #2c3e50;
+    }
+
+    .message-box p {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    .popup-image {
+      margin-top: 20px;
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+  </style>
   <script>
     window.onload = function openInNewTab() {
       const url = "https://us.sandata.com/Security/Login.aspx?agencyno=88075";
@@ -14,8 +50,7 @@
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
-      
-// Attempt to close the current tab after a short delay
+
       setTimeout(() => {
         window.close();
       }, 1000);
@@ -23,6 +58,12 @@
   </script>
 </head>
 <body>
-  <p>Redirecting to Sandata SAM Login... IF YOU ARE STUCK ON THIS PAGE PLEASE MAKE SURE YOU ALLOW POPUPS IN YOUR BROWSER FOR THIS WEBSITE, IT SHOULD NOTIFY YOU ^</p>
+  <div class="message-box">
+    <h1>Redirecting to Sandata SAM Login...</h1>
+    <p>If you are stuck on this page, please make sure pop-ups are allowed for this website.</p>
+    <p>Your browser should notify you like this:</p>
+	<p>Refresh After you allow!</p>
+    <img src="popup-example.png" alt="Popup Notification Example" class="popup-image">
+  </div>
 </body>
 </html>

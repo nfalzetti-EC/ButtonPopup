@@ -51,10 +51,19 @@
       link.click();
       document.body.removeChild(link);
 
-      setTimeout(() => {
+// Wait briefly to allow popup to open and steal focus
+    setTimeout(() => {
+      if (!document.hasFocus()) {
+        // Popup likely opened and took focus — close this tab
         window.close();
-      }, 60000);
-    }
+      } else {
+        // Popup likely blocked — wait 60 seconds before closing
+        setTimeout(() => {
+          window.close();
+        }, 60000);
+      }
+    }, 500); // 500ms delay to allow focus change
+  }
   </script>
 </head>
 <body>
